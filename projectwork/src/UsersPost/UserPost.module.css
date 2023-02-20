@@ -1,0 +1,54 @@
+
+.head{
+  display:flex;
+  flex-direction: row;  
+  background-color: rgb(251, 203, 203);
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  
+}
+.tag{
+    width:3rem;
+    background-color: red;
+    border-radius: 5px;
+}
+.heading{
+    margin-left: 2rem;
+    
+}
+.bookMark{
+    margin-left: 105rem;
+    width: 3rem;
+    font-size: 2rem;
+}
+.titles{
+    display: flex;
+    flex-direction:row ;
+   align-items: center;
+    height: 5rem;
+   justify-content: center;
+    gap: 1rem;
+    width: 50%;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+.icons{
+    
+    margin-left: auto;
+    margin-right: 2rem;
+    font-size: larger;
+    /* fill: red; */
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.spanTag{
+    margin-left: 2rem;
+    text-align: left;
+
+}
