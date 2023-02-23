@@ -5,6 +5,7 @@ import { UserSelectedData } from "../Recoil/UserSelectedData"
 import style from "./SelectedUserPost.module.css"
 export default function SelectedUserPost(){
     const usersPost=useRecoilValue(UserSelectedData)
+    // const usersPost= JSON.parse(localStorage.getItem(("list")))
     console.log(usersPost,"userdata")
     return(
         <>
