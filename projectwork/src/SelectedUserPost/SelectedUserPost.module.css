@@ -1,17 +1,35 @@
-.mainDiv{
-    display: flex;
-    flex-direction:row ;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15rem;
-    margin-left: 50rem;
-    padding: 1rem;
-    width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 40vh;
-    align-items: center;
-    display: flex;
-    flex-direction:row ;
-    align-items: center;
-    font-size: larger;
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 50rem;
+  padding: 1rem;
+  width: 20vw;
+  box-shadow: 5px 5px 5px 5px gray;
+  height: 50vh;
+
+  font-size: xx-large;
+  z-index: 1;
+  margin-top: 20vh;
+  position: absolute;
+  color: white;
+  
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/originals/ca/fd/fe/cafdfecffe9e91c1fc38b2e286218b92.jpg");
 }
+.main {
+  background-image: url("https://wallpaper-house.com/data/out/10/wallpaper2you_412558.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  background-position: center;
+}
+/* https://cdn.wallpapersafari.com/14/17/wqfV3x.jpg */
+/* https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700320194.jpg */
+/* https://media.gettyimages.com/id/998461120/video/4k-red-particle-dust-abstract-background-seamless-loop-chek-my-page-for-difrent-background.jpg?s=640x640&k=20&c=5MIcMPabaPW-azn8-8cf3ndUM3Y8jUllUg9YJH7I9bc= */
+/* https://www.desktopbackground.org/p/2010/06/19/35554_cool-black-wallpaper-110-156-hd-wallpapers-jpg_1920x1200_h.jpg */

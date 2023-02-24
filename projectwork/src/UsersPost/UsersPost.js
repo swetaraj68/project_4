@@ -31,7 +31,7 @@ export default function UsersPost() {
         "id": 4,
         "title": "Healthy Breakfast Ideas",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci ac velit bibendum convallis. #breakfast #healthy #recipes",
-        "hashtag": ["breakfast ", "healthy ", "recipes    "]
+        "hashtag": ["breakfast", "healthy", "recipes"]
       },
       {
         "id": 5,
@@ -51,7 +51,7 @@ export default function UsersPost() {
   const [postTitle, setPostTitle] = useState("");
   const [postbody, setPostBody] = useState("");
   const [postTags, setPostTags] = useState("");
-  const [searchValue, setSearchValue] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   const [selectedTag, setSelectedTag] = useState('');
 
   useEffect(()=>{
@@ -71,14 +71,12 @@ export default function UsersPost() {
   async function FetchData() {
     // const response = await fetch("https://jsonplaceholder.typicode.com/posts");
     // const responseData = await response.json();
-    // console.log(responseData, "previous");
     // let newData = responseData.map((x) => {
     //   x.isBokk = false;
     //   x.hashtag = "";
     //   return x;
     // });
 
-    // console.log(responseData, "here is map");
     
     // setUserData(newData);
     // setNewPost(newPost,...responseData)
@@ -91,23 +89,17 @@ export default function UsersPost() {
 
   function storeClickedData(e) {
     setData(e);
-    //   console.log(e)
     nav("/selectedpost");
   }
-  console.log(data);
   function bookMarkData(e) {
     e.isBokk = true;
-    console.log(e, "i am from id");
 
     setUserData([...userData]);
 
-    // console.log(recoiled, "recoilo data");
 
     setBookmark([e, ...bookMark]);
-    // console.log(bookMark, "i am from bookmark");
     localStorage.setItem("list",JSON.stringify(userData))
   }
- console.log(userData)
   function addPost() {
     const newPostData = {
       body: postbody,
@@ -125,55 +117,58 @@ export default function UsersPost() {
     setPostTags("");
   }
    
-  console.log(userData, "after adding data");
   
   function captureTitle(e) {
     setPostTitle(e.target.value);
-    console.log(postTitle, "here is tittle");
   }
   function captureBody(e) {
     setPostBody(e.target.value);
-    console.log(postbody, "here is body");
   }
   function captureTags(e) {
     setPostTags(e.target.value);
-    console.log(postTags, "here is tittle");
   }
   function searchPost(e) {
-    const searchData=e.target.value
-    setSearchValue(searchData);
-    const filtered =userData.filter((e)=>{
-      return e.hashtag.includes(searchData) || userData.hashtag.includes(searchData)
-    })
+    setSearchValue(e.target.value);
+    
   }
-  // const allTags = [...new Set(PostData.flatMap(post => post.tags))];
-  const alltagss =[...userData]
-  console.log(alltagss,"here i have tags")
-  const handleTagClick = (id) => {
-    setSelectedTag(id);
+  const allTagsArray = (PostData.map(post =>post.hashtag))
+
+  console.log(allTagsArray)
+  const handleTagClick = (ele) => {
+    setSelectedTag(ele.hashtag);
+    console.log(ele,"")
   };
+ function handleHastag(e){
+setSearchValue(e)
+ }
   return (
     <>
       <div className={style.head}>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsNoH6rB8RKyHVlrUhyPZZptOve6efuXnWenuwyY_hi8x6P3wJK4IlI8sSu5kCKBu0BWI&usqp=CAU"
+        <div className={style.logos}>
+        <img 
+          src="https://imgur.com/yFheJyF.png"
           alt="loading"
           className={style.tag}
         />
         <h3 className={style.heading}>LA POSTE</h3>
-        <input onChange={searchPost} value={searchValue} />
-       
+        </div>
+        <div>
+        <input onChange={searchPost } value={searchValue} className={style.searchBox} placeholder="search here"/>
+        </div>
+        <div>
         <Link to="/bookmarked">
           <BsFillBookmarkHeartFill className={style.bookMark} />
-        </Link>
+        </Link></div>
       </div>
-      <h3 > {alltagss.map((ele,id)=><h3 onClick={() => handleTagClick(id)}>{ele.hashtag}</h3>)}</h3>
+      {allTagsArray.map((e)=> { return e.map((e)=><span onClick ={()=>handleHastag(e)}>{e}</span>)})}
+      {/* <h3 > {alltagss.map((ele,id)=><h3 onClick={() => handleTagClick(ele.hashtag)}>{ele.hashtag}</h3>)}</h3> */}
+      <div className={style.bodyPost}>
       <input placeholder="title" onChange={captureTitle} value={postTitle}/>
       <input placeholder="body" onChange={captureBody}value={postbody} />
       <input placeholder="#tags" onChange={captureTags} value={postTags}/>
-      <button onClick={addPost}>addPost</button>
+      <button onClick={addPost}>addPost</button></div>
       <div className={style.middle}>
-        {userData.map((e, id) => (
+        {userData.filter(y=>y.title.toLocaleLowerCase().includes(searchValue.toLowerCase())).map((e, id) => (
           <div className={style.titles} key={id}>
             <span onClick={() => storeClickedData(e)} className={style.spanTag}>
               {" "}
@@ -197,3 +192,5 @@ export default function UsersPost() {
 // .filter((e)=>e.hashtag.toLowerCase().includes(searchPost.toLowerCase()))
 // onClick={() => handleTagClick(id)}
 //.map((post,id)=>post.hashtag)
+// .filter(e=>e.title.toLowerCase().includes(searchValue.toLowerCase()))
+// const data =(a,b)=>{return a+b}
