@@ -1,0 +1,11 @@
+.postDetails {
+  background-image: url("https://www.hdwallpapers.in/download/plant_leaves_water_drops_dark_background_4k_hd_nature-3840x2160.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.p-4 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  
+}

@@ -1,0 +1,37 @@
+.container {
+  /* background-color: blueviolet; */
+  /* display: flex; */
+}
+.aaddPost {
+  display: flex !important;
+}
+.mt-5 {
+  margin-top: 20 !important;
+}
+.button {
+  background-color: rgb(20, 61, 4);
+  border-radius: 4px ;
+  color: white;
+  font-size: 2rem;
+}
+.postDiv {
+  background-color: rgb(207, 239, 205);
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(137, 7, 7); */
+  column-gap: 5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 5vh;
+  box-shadow: 5px 5px 5px 5px grey;
+  
+}
+.navDiv {
+  background-image: url("https://www.hdwallpapers.in/download/plant_leaves_water_drops_dark_background_4k_hd_nature-3840x2160.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  height: 300vh;
+}
+.container {
+  column-gap: 5rem;
+}
