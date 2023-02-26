@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CreatePost from "./CreatePost/CreatePost";
 import Posts from "./Posts/Posts";
 import PostsDetails from "./Posts/PostDetails";
+import BookMarked from "./Posts/BookMarked";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ root.render(
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/posts/:id" element={<PostsDetails />} />
+        <Route path="/bookmarkedData" element={<BookMarked/>}/>
       </Routes>
     </RecoilRoot>
   </BrowserRouter>

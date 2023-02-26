@@ -24,6 +24,7 @@ export default function CreatePost() {
         title,
         id: crypto.randomUUID(),
         createdAt: Date.now(),
+        isBookmarked : false
       },
     ]);
 
@@ -57,7 +58,7 @@ export default function CreatePost() {
           <RichTextEditor value={html} onChange={handleOnHTMLChange} id="rte" />
         </div>
         <div className="mb-3">
-          <button class="btn btn-success" onClick={createPost}>
+          <button className="btn btn-success" onClick={createPost}>
             Create Post
           </button>
         </div>

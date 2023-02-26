@@ -24,7 +24,8 @@ export default function PostDetails() {
         <h1 className="display-1">{post.title}</h1>
         <hr />
         <div
-          className="p-4"
+          className="p-4 content"
+
           dangerouslySetInnerHTML={{
             __html: post.content,
           }}

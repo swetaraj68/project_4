@@ -7,5 +7,8 @@
 .p-4 {
   font-weight: bolder;
   font-size: 1.5rem;
-  
+}
+.content img {
+  width: 50%;
+  height: auto;
 }

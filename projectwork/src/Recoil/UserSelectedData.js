@@ -9,24 +9,28 @@ export const postsRecoilState = atom({
       title: "TEST HTML",
       id: 12232424,
       createdAt: Date.now(),
+      isBookmarked : false
+    },
+    {
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: "TEST CON",
+      id: crypto.randomUUID(),
+      createdAt: Date.now(),
+      isBookmarked : false
     },
     {
       content: "HTML CONTENT",
       title: "TEST CON",
       id: crypto.randomUUID(),
       createdAt: Date.now(),
+      isBookmarked : false
     },
     {
       content: "HTML CONTENT",
       title: "TEST CON",
       id: crypto.randomUUID(),
       createdAt: Date.now(),
-    },
-    {
-      content: "HTML CONTENT",
-      title: "TEST CON",
-      id: crypto.randomUUID(),
-      createdAt: Date.now(),
+      isBookmarked : false
     },
   ],
 });
@@ -38,5 +42,5 @@ export const UserSelectedData = atom({
 
 export const BookmarkedData = atom({
   key: "BookmarkedData",
-  default: [],
+  default: {},
 });
