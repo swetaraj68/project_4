@@ -1,6 +1,6 @@
 import { Link ,useNavigate } from "react-router-dom";
 
-import { useState } from "react";
+
 import "./custom.css";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 export default function NavBar() {
@@ -10,28 +10,35 @@ export default function NavBar() {
   }
   return (
     <>
-      <nav className="navbarMain ">
-        <div className="container-fluid background-color: #eee ;w-50 p-3">
-          <a className="navbar-brand" href="/">
-            <div>
-              <Link to="/" className="link">
-                Home
-              </Link>
-            </div>
-            <div>
-              <Link to="/create-post" className="link">
-                Create Post
-              </Link>
-            </div>
-          </a>
+      
+      <div className="main">
+      <div className="left">
+        <div className="leftSec">
+      <img width ="10%"
+          src="https://i.imgur.com/yFheJyF.png"
+          alt="loading"
+          // className={style.tag}
+        />
+        <h3 
+        >LA POSTE</h3></div>
+        <div className="leftThird">
+      <Link to="/" className="link">
+        
+        <p>Home</p></Link>
 
+        <Link to="/create-post" className="link">
+        <p>Create Post</p></Link>
+        </div>
+        </div>
+        <div className="bookmarked">
           
           <BsFillBookmarkHeartFill onClick={handleRedirect}/>
-          
-        </div>
-      </nav>
+         
+          </div>
+    </div>
+  
+
     </>
   );
 }
-//border border-dark; navbar-expand-lg bg-info
-//
+

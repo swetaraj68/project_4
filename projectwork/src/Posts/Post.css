@@ -10,7 +10,7 @@
 }
 .button {
   background-color: rgb(20, 61, 4);
-  border-radius: 4px ;
+  border-radius: 4px;
   color: white;
   font-size: 2rem;
 }
@@ -24,7 +24,6 @@
   border-radius: 10px;
   margin-top: 5vh;
   box-shadow: 5px 5px 5px 5px grey;
-  
 }
 .navDiv {
   background-image: url("https://www.hdwallpapers.in/download/plant_leaves_water_drops_dark_background_4k_hd_nature-3840x2160.jpg");
@@ -35,3 +34,22 @@
 .container {
   column-gap: 5rem;
 }
+.searchBar {
+  position: absolute;
+  margin-top: -6vh;
+  border-radius: 10px;
+  width: 15vw;
+  margin-right: 5vw;
+  height: 5vh;
+  padding-left: 1rem;
+
+}
+.midlleLeft{
+display: flex;
+justify-content: space-between;
+width: 10vw;
+}
+.bookmarkeds{
+  font-size: 3rem;
+}
+

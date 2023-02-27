@@ -1,4 +1,4 @@
-.bg-body-tertiary {
+/* .bg-body-tertiary {
   color: red;
   background-color: blueviolet;
 }
@@ -9,11 +9,65 @@
 
 .navbarMain {
   background-color: rgb(5, 110, 44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar-brand {
   font-size: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 20vw;
-
+}
+.book {
+  color: blue;
+  font-size: 2rem;
+  margin-left: 100rem;
+  /* margin-bottom: 2rem; */
+/* }
+.leftDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+  align-items: center;
+} */
+.main {
+  background-color: rgb(105, 201, 105);
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  align-items: center;
+  height: 8vh;
+}
+.left {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.leftSec{
+  display: flex;
+ color: red;
+}
+.leftThird{
+  display: flex;
+  width: 50vw;
+  justify-content: space-between;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.bookmarked{
+  color: blue;
+font-size: 2rem;
+margin:0 1vw 1vw 0;
+}
+@media screen and (max-width: 480px) {
+  .left{
+    font-size: 1rem;
+    width: 40vw;
+  }
 }

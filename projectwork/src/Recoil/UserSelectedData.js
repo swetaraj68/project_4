@@ -6,7 +6,7 @@ export const postsRecoilState = atom({
   default: [
     {
       content: "<h1>Hello Worldld</h1> <io><li>Helooo</li></ol>",
-      title: "TEST HTML",
+      title: "TEST HTML1",
       id: 12232424,
       createdAt: Date.now(),
       isBookmarked : false
@@ -42,5 +42,5 @@ export const UserSelectedData = atom({
 
 export const BookmarkedData = atom({
   key: "BookmarkedData",
-  default: {},
+  default: [],
 });

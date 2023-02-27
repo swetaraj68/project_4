@@ -31,7 +31,7 @@ export default function Posts() {
       _posts.splice(i, 1, bookMarkedPost);
       setPosts(_posts);
 
-      setBookMarkedData(post);
+      setBookMarkedData([post,...bookMarkedData]);
     } else if (post.isBookmarked) {
       const bookMarkedPost = {
         content: post.content,
@@ -55,7 +55,7 @@ export default function Posts() {
   return (
     <div className="navDiv">
       <NavBar />
-      <input
+      <input className="searchBar"
         type="text"
         placeholder="Search Here"
         onChange={captureInput}
@@ -73,8 +73,9 @@ export default function Posts() {
                   <Link to={`/posts/${post.id}`}>
                     <h1>{post.title}</h1>
                   </Link>
-
+                   <div className="midlleLeft">
                   <BsFillBookmarkHeartFill
+                  className="bookmarkeds"
                     onClick={() => captureBookmarked(post, i)}
                     style={{ fill: post.isBookmarked ? "red" : "" }}
                   />
@@ -82,6 +83,7 @@ export default function Posts() {
                   <button className="button" onClick={() => handleDelete(i)}>
                     Delete
                   </button>
+                  </div>
                 </div>
               </p>
             ))}
