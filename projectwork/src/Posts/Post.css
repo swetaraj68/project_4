@@ -1,6 +1,15 @@
-.container {
-  /* background-color: blueviolet; */
-  /* display: flex; */
+.mainContainers {
+  
+  background-color: rgb(207, 239, 205);
+  margin-top: 10vh;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px grey;
+  width: 80vw;
+  height: 80vh;
+  
+  margin-left: 8rem;
+  height: fit-content;
 }
 .aaddPost {
   display: flex !important;
@@ -18,38 +27,36 @@
   background-color: rgb(207, 239, 205);
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid rgb(137, 7, 7); */
+  
   column-gap: 5rem;
   padding: 1.5rem;
   border-radius: 10px;
   margin-top: 5vh;
   box-shadow: 5px 5px 5px 5px grey;
+ 
 }
 .navDiv {
   background-image: url("https://www.hdwallpapers.in/download/plant_leaves_water_drops_dark_background_4k_hd_nature-3840x2160.jpg");
-  /* background-size: cover; */
+ 
   background-repeat: no-repeat;
   height: 300vh;
 }
-.container {
-  column-gap: 5rem;
-}
+
 .searchBar {
   position: absolute;
-  margin-top: -6vh;
+  margin-top: -8vh;
   border-radius: 10px;
-  width: 15vw;
-  margin-right: 5vw;
-  height: 5vh;
+  width: 20vw;
+  margin-right: 4vw;
+  height: 7vh;
   padding-left: 1rem;
-
+  margin-left: -6rem;
 }
-.midlleLeft{
-display: flex;
-justify-content: space-between;
-width: 10vw;
+.midlleLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 15vw;
 }
-.bookmarkeds{
+.bookmarkeds {
   font-size: 3rem;
 }
-

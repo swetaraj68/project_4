@@ -1,43 +1,11 @@
-/* .bg-body-tertiary {
-  color: red;
-  background-color: blueviolet;
-}
-.link {
-  text-decoration: none;
-  color: white;
-}
 
-.navbarMain {
-  background-color: rgb(5, 110, 44);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar-brand {
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  width: 20vw;
-}
-.book {
-  color: blue;
-  font-size: 2rem;
-  margin-left: 100rem;
-  /* margin-bottom: 2rem; */
-/* }
-.leftDiv {
-  display: flex;
-  justify-content: space-around;
-  width: 30vw;
-  align-items: center;
-} */
 .main {
   background-color: rgb(105, 201, 105);
   display: flex;
   justify-content: space-between;
   padding: 0rem 1rem;
   align-items: center;
-  height: 8vh;
+  height: 10vh;
 }
 .left {
   display: flex;
@@ -49,19 +17,21 @@
 }
 .leftSec{
   display: flex;
- color: red;
+ color: rgb(172, 50, 50);
+ font-weight: 2rem;
 }
 .leftThird{
   display: flex;
-  width: 50vw;
+  width: 80vw;
   justify-content: space-between;
+  font-size: 1.5rem;
 }
 .link {
   text-decoration: none;
   color: white;
 }
 .bookmarked{
-  color: blue;
+  color: rgb(8, 30, 138);
 font-size: 2rem;
 margin:0 1vw 1vw 0;
 }

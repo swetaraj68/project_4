@@ -14,10 +14,10 @@ export default function NavBar() {
       <div className="main">
       <div className="left">
         <div className="leftSec">
-      <img width ="10%"
+      <img width ="20%"
           src="https://i.imgur.com/yFheJyF.png"
           alt="loading"
-          // className={style.tag}
+          
         />
         <h3 
         >LA POSTE</h3></div>

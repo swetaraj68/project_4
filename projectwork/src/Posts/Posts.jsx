@@ -31,7 +31,7 @@ export default function Posts() {
       _posts.splice(i, 1, bookMarkedPost);
       setPosts(_posts);
 
-      setBookMarkedData([post,...bookMarkedData]);
+      setBookMarkedData([post, ...bookMarkedData]);
     } else if (post.isBookmarked) {
       const bookMarkedPost = {
         content: post.content,
@@ -55,13 +55,14 @@ export default function Posts() {
   return (
     <div className="navDiv">
       <NavBar />
-      <input className="searchBar"
+      <input
+        className="searchBar"
         type="text"
         placeholder="Search Here"
         onChange={captureInput}
         value={search}
       />
-      <div className="container ">
+      <div className="mainContainers ">
         <div class="list-group">
           {posts
             .filter((post) =>
@@ -73,16 +74,16 @@ export default function Posts() {
                   <Link to={`/posts/${post.id}`}>
                     <h1>{post.title}</h1>
                   </Link>
-                   <div className="midlleLeft">
-                  <BsFillBookmarkHeartFill
-                  className="bookmarkeds"
-                    onClick={() => captureBookmarked(post, i)}
-                    style={{ fill: post.isBookmarked ? "red" : "" }}
-                  />
+                  <div className="midlleLeft">
+                    <BsFillBookmarkHeartFill
+                      className="bookmarkeds"
+                      onClick={() => captureBookmarked(post, i)}
+                      style={{ fill: post.isBookmarked ? "red" : "" }}
+                    />
 
-                  <button className="button" onClick={() => handleDelete(i)}>
-                    Delete
-                  </button>
+                    <button className="button" onClick={() => handleDelete(i)}>
+                      Delete
+                    </button>
                   </div>
                 </div>
               </p>
@@ -92,4 +93,4 @@ export default function Posts() {
     </div>
   );
 }
-// d-flex flex-row  align-items-center justify-content-between border border-secondary w-100 p-3
+
